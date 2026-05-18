@@ -7,7 +7,9 @@ on:
   schedule:
     - cron: "30 1 * * *"
   workflow_dispatch:
-
+# 授予写入权限，让 github-actions[bot] 能够 push 代码到 main 和 data 分支
+permissions:
+  contents: write
 
 jobs:
   build:
